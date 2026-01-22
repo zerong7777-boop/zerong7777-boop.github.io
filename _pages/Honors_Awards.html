@@ -4,7 +4,7 @@ permalink: /Honors_Awards/
 author_profile: true
 ---
 
-<!-- ============== Projects (video-left + intro-right) ============== -->
+<!-- ============== Projects (media-left + intro-right) ============== -->
 <div class="honors" id="honors-awards">
 
 <style>
@@ -30,15 +30,6 @@ author_profile: true
   opacity:.65;margin-top:.45rem
 }
 
-/* ---------- Page note (vibe coding) ---------- */
-.honors .ha-note{
-  margin:.55rem 0 0;
-  color:var(--muted);
-  font-size:.92rem;
-  line-height:1.45;
-}
-.honors .ha-note b{color:#0f172a}
-
 /* ---------- Project rows (media left + intro right) ---------- */
 .honors .proj{
   border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:var(--shadow);
@@ -56,17 +47,41 @@ author_profile: true
 .honors .intro .meta{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.5rem}
 .honors .intro .chip{border:1px solid var(--chip-bd);background:var(--chip-bg);border-radius:999px;padding:.22rem .55rem;font-size:.8rem}
 
+/* ---------- Role & Time row ---------- */
+.honors .rt{
+  display:flex;flex-wrap:wrap;gap:.6rem;
+  margin:.35rem 0 .2rem;
+  color:#0f172a;font-size:.92rem
+}
+.honors .rt span{
+  display:inline-flex;align-items:center;gap:.35rem;
+  border:1px dashed var(--chip-bd);
+  background:rgba(248,250,252,.75);
+  border-radius:999px;
+  padding:.18rem .55rem
+}
+.honors .rt b{font-weight:900}
+
 /* ---------- (Optional) simple divider ---------- */
 .honors .subtle{height:1px;background:linear-gradient(90deg,transparent,#e5e7eb,transparent);margin:1.25rem 0}
+
+/* ---------- Vibe coding callout (SpectralLab only) ---------- */
+.honors .vibe{
+  margin:.55rem 0 0;
+  padding:.7rem .85rem;
+  border:1px solid var(--chip-bd);
+  border-radius:14px;
+  background:linear-gradient(135deg,rgba(99,102,241,.10),rgba(34,211,238,.08),rgba(6,182,212,.06));
+  color:#0f172a
+}
+.honors .vibe .t{font-weight:900;margin-bottom:.2rem}
+.honors .vibe p{margin:.15rem 0;color:#334155;font-size:.92rem}
 </style>
 
   <!-- Title -->
   <div class="ha-head">
     <span class="ha-title">Projects</span>
     <div class="ha-bar"></div>
-    <p class="ha-note">
-      <b>Built with vibe coding</b>: an LLM-assisted, iterative workflow (rapid prototyping → refactoring → polish).
-    </p>
   </div>
 
 
@@ -88,6 +103,13 @@ author_profile: true
       <!-- Intro -->
       <div class="intro" id="spectrallab">
         <h3>SpectralLab</h3>
+
+        <!-- Role & Time (leave blank for user to fill) -->
+        <div class="rt">
+          <span><b>Role</b>: </span>
+          <span><b>Time</b>: </span>
+        </div>
+
         <p>
           A web-based frequency-domain image analysis tool for visualization, filtering, and reconstruction across
           multiple transform chains (FFT/DFT, DCT, and DWT). Designed for fast research prototyping and teaching demos.
@@ -102,7 +124,17 @@ author_profile: true
           <span class="chip">Reconstruction</span>
           <span class="chip">Vue3</span>
           <span class="chip">OpenCV.js</span>
-          <span class="chip">Vibe-Coding</span>
+        </div>
+
+        <!-- Vibe coding note (SpectralLab only) -->
+        <div class="vibe">
+          <div class="t">Built with vibe coding (agent-assisted)</div>
+          <p>
+            This project was produced with an LLM-assisted vibe coding workflow: rapid prototyping → iterative refactoring → polish.
+          </p>
+          <p>
+            Tooling (fill in as desired): <b>[e.g., ChatGPT GPT-5.2 Thinking / Codex CLI / Claude Code / Cursor / etc.]</b>
+          </p>
         </div>
 
         <div class="subtle"></div>
@@ -145,11 +177,19 @@ author_profile: true
       <!-- Intro -->
       <div class="intro" id="ophthalmic">
         <h3>Ophthalmic Disease Diagnosis Platform</h3>
+
+        <!-- Role & Time (leave blank for user to fill) -->
+        <div class="rt">
+          <span><b>Role</b>: </span>
+          <span><b>Time</b>: </span>
+        </div>
+
         <p>
           An ophthalmology-focused pipeline covering enhancement → segmentation → classification → Q&amp;A. Centered on
           frequency-domain enhancement and FaRMamba segmentation, it emphasizes detail restoration and structured outputs
           for screening and research evaluation.
         </p>
+
         <div class="meta">
           <span class="chip">Ophthalmology</span>
           <span class="chip">Low-Light-Enhancement</span>
@@ -191,11 +231,19 @@ author_profile: true
       <!-- Intro -->
       <div class="intro" id="medical-3d">
         <h3>3D Medical Image Interactive Analysis Platform</h3>
+
+        <!-- Role & Time (leave blank for user to fill) -->
+        <div class="rt">
+          <span><b>Role</b>: </span>
+          <span><b>Time</b>: </span>
+        </div>
+
         <p>
           An interactive platform for medical imaging that integrates 3D visualization, segmentation, and result exporting.
           It supports multi-modal data and basic measurement/annotation. A lightweight VLM module enables image-grounded
           Q&amp;A and report drafting for teaching, research, and clinical assistance.
         </p>
+
         <div class="meta">
           <span class="chip">3D-Visualization</span>
           <span class="chip">Segmentation</span>
