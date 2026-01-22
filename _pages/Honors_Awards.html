@@ -4,7 +4,7 @@ permalink: /Honors_Awards/
 author_profile: true
 ---
 
-<!-- ============== Honors & Awards (2 projects, video-left + intro-right) ============== -->
+<!-- ============== Projects (video-left + intro-right) ============== -->
 <div class="honors" id="honors-awards">
 
 <style>
@@ -30,7 +30,16 @@ author_profile: true
   opacity:.65;margin-top:.45rem
 }
 
-/* ---------- Project rows (video left + intro right) ---------- */
+/* ---------- Page note (vibe coding) ---------- */
+.honors .ha-note{
+  margin:.55rem 0 0;
+  color:var(--muted);
+  font-size:.92rem;
+  line-height:1.45;
+}
+.honors .ha-note b{color:#0f172a}
+
+/* ---------- Project rows (media left + intro right) ---------- */
 .honors .proj{
   border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:var(--shadow);
   padding:1rem;margin:1rem 0;overflow:hidden
@@ -55,6 +64,9 @@ author_profile: true
   <div class="ha-head">
     <span class="ha-title">Projects</span>
     <div class="ha-bar"></div>
+    <p class="ha-note">
+      <b>Built with vibe coding</b>: an LLM-assisted, iterative workflow (rapid prototyping → refactoring → polish).
+    </p>
   </div>
 
 
@@ -62,7 +74,7 @@ author_profile: true
   <!-- ================= Project: SpectralLab ================= -->
   <section class="proj" aria-label="SpectralLab">
     <div class="proj-grid">
-      <!-- Cover (no video) -->
+      <!-- Cover (image link) -->
       <div class="ratio">
         <a href="https://zerong7777-boop.github.io/spectrallab/" target="_blank" rel="noopener"
            title="Open SpectralLab Live Demo"
@@ -72,7 +84,7 @@ author_profile: true
                style="width:100%; height:100%; object-fit:cover; display:block;" />
         </a>
       </div>
-  
+
       <!-- Intro -->
       <div class="intro" id="spectrallab">
         <h3>SpectralLab</h3>
@@ -80,7 +92,7 @@ author_profile: true
           A web-based frequency-domain image analysis tool for visualization, filtering, and reconstruction across
           multiple transform chains (FFT/DFT, DCT, and DWT). Designed for fast research prototyping and teaching demos.
         </p>
-  
+
         <div class="meta">
           <span class="chip">Frequency-Domain</span>
           <span class="chip">FFT</span>
@@ -90,21 +102,22 @@ author_profile: true
           <span class="chip">Reconstruction</span>
           <span class="chip">Vue3</span>
           <span class="chip">OpenCV.js</span>
+          <span class="chip">Vibe-Coding</span>
         </div>
-  
+
         <div class="subtle"></div>
-  
+
         <p><strong>Links</strong></p>
         <p>
           • Live Demo: <a href="https://zerong7777-boop.github.io/spectrallab/" target="_blank" rel="noopener">GitHub Pages</a><br>
           • Code: <a href="https://github.com/zerong7777-boop/spectrallab" target="_blank" rel="noopener">GitHub Repository</a>
         </p>
-  
+
         <p><strong>Highlights</strong></p>
         <p>
           • Multi-image workspace and transform switching<br>
           • Spectrum / coefficient visualization (log + normalization, FFT shift)<br>
-          • Filters: ideal & Gaussian (LP/HP/BP/BS)<br>
+          • Filters: ideal &amp; Gaussian (LP/HP/BP/BS)<br>
           • Real-time reconstruction and side-by-side comparison<br>
           • Energy-based statistics panel
         </p>
@@ -112,28 +125,30 @@ author_profile: true
     </div>
   </section>
 
-  
 
-  <!-- ================= Row 2: Competitions ================= -->
-  <section class="proj" aria-label="Competitions">
+
+  <!-- ================= Project: Ophthalmic Platform (Competitions) ================= -->
+  <section class="proj" aria-label="Ophthalmic Disease Diagnosis Platform">
     <div class="proj-grid">
       <!-- Video -->
       <div class="ratio">
-        <!-- <!-- 方式 A：B站示例 -->
+        <!-- 方式 A：B站示例
         <iframe src="https://player.bilibili.com/player.html?bvid=BV1xx411c7mD&high_quality=1&danmaku=0"
-                title="Competition Highlights" allowfullscreen loading="lazy" referrerpolicy="no-referrer"></iframe> -->
+                title="Competition Highlights" allowfullscreen loading="lazy" referrerpolicy="no-referrer"></iframe>
+        -->
 
-        方式 B：本地/云端 mp4
+        <!-- 方式 B：本地/云端 mp4 -->
         <video src="/assets/Honors/CRAIC_2025_web.mp4" playsinline controls preload="metadata"
                poster="/assets/videos/competitions_poster.jpg"></video>
-       
       </div>
 
       <!-- Intro -->
-      <div class="intro" id="Ophthalmic">
+      <div class="intro" id="ophthalmic">
         <h3>Ophthalmic Disease Diagnosis Platform</h3>
         <p>
-          An ophthalmology-focused pipeline covering enhancement → segmentation → classification → Q&A. Centered on frequency-domain enhancement and FaRMamba segmentation, it emphasizes detail restoration and structured outputs for screening and research evaluation.
+          An ophthalmology-focused pipeline covering enhancement → segmentation → classification → Q&amp;A. Centered on
+          frequency-domain enhancement and FaRMamba segmentation, it emphasizes detail restoration and structured outputs
+          for screening and research evaluation.
         </p>
         <div class="meta">
           <span class="chip">Ophthalmology</span>
@@ -141,55 +156,62 @@ author_profile: true
           <span class="chip">Multi-Label-Classification</span>
           <span class="chip">Segmentation</span>
           <span class="chip">VLM-Assistant</span>
-
-          
         </div>
+
         <div class="subtle"></div>
+
         <p><strong>Awards</strong></p>
-        <p>• China Robot and Artificial Intelligence Competition (CRAIC) 2025 (National Second Prize)<br>
-          • Service Outsourcing Innovation & Entrepreneurship Competition (Eastern Division, Third Prize)
-           </p>
+        <p>
+          • China Robot and Artificial Intelligence Competition (CRAIC) 2025 (National Second Prize)<br>
+          • Service Outsourcing Innovation &amp; Entrepreneurship Competition (Eastern Division, Third Prize)
+        </p>
       </div>
     </div>
   </section>
 
 
 
-    <!-- ================= Row 1: Academic Honors ================= -->
-  <section class="proj" aria-label="Academic Honors">
+  <!-- ================= Project: 3D Medical Platform (Academic Honors) ================= -->
+  <section class="proj" aria-label="3D Medical Image Interactive Analysis Platform">
     <div class="proj-grid">
       <!-- Video -->
       <div class="ratio">
-        <!-- 方式 A：外链平台（示例 YouTube） -->
-        <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
+        <!-- 方式 A：外链平台（示例 YouTube）
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
                 title="Academic Honors Highlights"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe> -->
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        -->
 
-        <!-- 方式 B：本地/云端 mp4（取消注释并删上面的 iframe）        -->
+        <!-- 方式 B：本地/云端 mp4 -->
         <video src="/assets/Honors/CRAIC_2024_web.mp4" playsinline controls preload="metadata"
                poster="/assets/videos/academic_poster.jpg"></video>
-
       </div>
 
       <!-- Intro -->
-      <div class="intro" id="3D">
+      <div class="intro" id="medical-3d">
         <h3>3D Medical Image Interactive Analysis Platform</h3>
         <p>
-An interactive platform for medical imaging that integrates 3D visualization, segmentation, and result exporting. It supports multi-modal data and basic measurement/annotation. A lightweight VLM module enables image-grounded Q&A and report drafting for teaching, research, and clinical assistance.
+          An interactive platform for medical imaging that integrates 3D visualization, segmentation, and result exporting.
+          It supports multi-modal data and basic measurement/annotation. A lightweight VLM module enables image-grounded
+          Q&amp;A and report drafting for teaching, research, and clinical assistance.
         </p>
         <div class="meta">
           <span class="chip">3D-Visualization</span>
           <span class="chip">Segmentation</span>
-          <span class="chip">Multimodal-analyze</span>
+          <span class="chip">Multimodal-Analyze</span>
         </div>
+
         <div class="subtle"></div>
+
         <p><strong>Awards</strong></p>
-        <p>• Chinese Collegiate Computing Competition 2024 (National Second Prize)<br>
-           • China Robot and Artificial Intelligence Competition (CRAIC) 2024 (National First Prize)</p>
+        <p>
+          • Chinese Collegiate Computing Competition 2024 (National Second Prize)<br>
+          • China Robot and Artificial Intelligence Competition (CRAIC) 2024 (National First Prize)
+        </p>
       </div>
     </div>
   </section>
 
 </div>
-<!-- ===================== /Honors & Awards ===================== -->
+<!-- ===================== /Projects ===================== -->
