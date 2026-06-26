@@ -12,7 +12,7 @@ site_theme               : "default" # Currently available options are "default"
 title                    : "戎泽 Ze Rong - Homepage"
 title_separator          : "-"
 name                     : &name "戎泽 Ze Rong"
-description              : &description "戎泽（Ze Rong）的学术主页：医学影像、多模态体育分析、非侵入式 BCI 与 AI 研究。"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "戎泽（Ze Rong）的学术主页：澳门大学 AI 方向 incoming master's student，南通大学计算机科学本科，研究方向包括可靠多模态学习、计算机视觉、fMRI 语义解码与 evidence-grounded AI。"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://zerong7777-boop.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
