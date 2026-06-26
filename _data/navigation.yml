@@ -15,8 +15,9 @@ main:
     url: /publications/
 
 
-  - title: "Projects"
-    url: /Honors_Awards/
+  # Temporarily hidden; keep the page available for later re-enabling.
+  # - title: "Projects"
+  #   url: /Honors_Awards/
 
   # - title: "Publications"
   #   url: /publications/
