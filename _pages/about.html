@@ -1,12 +1,13 @@
 ---
 permalink: /
 author_profile: true
+description: "Ze Rong, master's student in AI at the University of Macau. Research in spatial intelligence and visual generalization, with work in localization, cross-modal learning, medical vision, and neural decoding."
 redirect_from: 
   - /about/
   - /about.html
 seo:
-  title: "戎泽 Ze Rong | Medical Imaging · Sports Analytics · BCI"
-  description: "戎泽（Ze Rong）的学术主页：澳门大学 AI 方向 incoming master's student，南通大学计算机科学本科，研究方向包括可靠多模态学习、计算机视觉、fMRI 语义解码与 evidence-grounded AI。"
+  title: "戎泽 Ze Rong | Spatial Intelligence · Visual Generalization"
+  description: "戎泽（Ze Rong）的学术主页：澳门大学 AI 方向硕士生，南通大学本科，当前关注空间智能与视觉泛化；研究经历涵盖几何定位、跨模态学习、医学视觉和神经语义解码。"
   image: /assets/img/og-cover.png
 ---
 
@@ -16,7 +17,7 @@ seo:
   "@type": "ProfilePage",
   "url": "https://zerong7777-boop.github.io/",
   "name": "戎泽（Ze Rong）",
-  "description": "Personal academic homepage of 戎泽（Ze Rong）, an incoming master's student in AI at University of Macau and B.Eng. graduate from Nantong University working on reliable multimodal learning, computer vision, fMRI semantic decoding, and evidence-grounded AI.",
+  "description": "Personal academic homepage of 戎泽（Ze Rong）, a master's student in AI at the University of Macau and B.Eng. graduate from Nantong University. His current research focuses on spatial intelligence and visual generalization, with broader experience in cross-modal learning, medical vision, and neural semantic decoding.",
   "mainEntity": {
     "@type": "Person",
     "name": "戎泽",
@@ -36,11 +37,11 @@ seo:
       "name": "Nantong University"
     },
     "knowsAbout": [
-      "Medical imaging",
-      "Multimodal sports analytics",
-      "Non-invasive BCI",
-      "Artificial intelligence",
-      "Vision-language models"
+      "Spatial intelligence",
+      "Visual generalization",
+      "Cross-modal representation learning",
+      "Medical image analysis",
+      "Neural semantic decoding"
     ],
     "sameAs": [
       "https://github.com/zerong7777-boop",
@@ -55,208 +56,257 @@ seo:
 
 <style>
 .only-main{
-  --line:#e5e7eb;--muted:#475569;--shadow:0 8px 24px rgba(2,6,23,.06);
+  --line:#e3e9ee;--muted:#526174;--ink:#25384b;
   --title-grad:linear-gradient(90deg,#6366f1 0%,#22d3ee 35%,#06b6d4 100%);
-  --bar-grad:linear-gradient(90deg,#fde68a,#fca5a5,#a7f3d0);
-  --chip-bg:#f8fafc;--chip-bd:#e5e7eb;
+  --shadow:0 4px 18px rgba(31,52,73,.035);
+  color:var(--ink);
 }
 .only-main *{box-sizing:border-box}
+/* Recover the legacy template's unused right gutter on smaller desktops. */
+@media(min-width:925px) and (max-width:1279px){
+  .page:has(.only-main){padding-right:1.25rem}
+}
+@media(min-width:768px) and (max-width:1279px){
+  .only-main .research-map .research-node .node-label{min-height:3.2em}
+}
 
-/* Title bar */
-.only-main .twrap{margin:.25rem 0 .9rem}
+/* Name and portfolio masthead */
+.only-main .twrap{display:flex;align-items:baseline;gap:1rem;margin:.1rem 0 1rem}
 .only-main .title{
-  display:inline-block;          /* 让 padding 生效并避免行盒裁剪 */
-  line-height:1.15;              /* 稍放松行高，原来是 1.1 */
-  padding-bottom:.08em;          /* 给下沿一点呼吸空间，防裁剪 */
-  background:var(--title-grad);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-  font-size:clamp(1.9rem,1.2rem + 1.8vw,2.5rem);
-  font-weight:900;
+  margin:0;line-height:1.15;letter-spacing:-.045em;
+  font-size:clamp(2rem,1.3rem + 1.7vw,2.6rem);font-weight:800;
 }
-.only-main .bar{
-  margin-top:.6rem;              /* 彩条与文字再拉开些，避免视觉压迫 */
-  height:10px;                   /* 可选：稍厚一点更均衡 */
-}
+.only-main .portfolio-label{padding-left:1rem;border-left:1px solid #ccd7df;font-size:.65rem;letter-spacing:.13em;text-transform:uppercase;font-weight:650}
+.only-main .title,.only-main .portfolio-label{background:var(--title-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 /* Cards */
 .only-main .card{
-  border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:var(--shadow);padding:1rem
+  border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--shadow);padding:1.2rem
 }
 .only-main .muted{color:var(--muted)}
 .only-main .bold{font-weight:900}
+.only-main > section + section{margin-top:1.25rem}
+.only-main a:focus-visible{outline:2px solid #0891b2;outline-offset:4px;border-radius:2px}
 
-/* Hero summary (no avatar since sidebar already has it) */
-.only-main .hero p{margin:.25rem 0}
+/* Personal introduction */
+.only-main .hero{border:0;border-radius:0;box-shadow:none;background:transparent;padding:.15rem 0 .3rem}
+.only-main .hero p{margin:0;color:var(--muted);font-size:.96rem;line-height:1.85}
+.only-main .hero strong{color:var(--ink);font-weight:750}
+.only-main .hero a{white-space:nowrap;text-underline-offset:.17em}
 
-/* Two columns: Interests / Now (保留，不影响功能) */
-.only-main .cols{display:grid;gap:1rem;margin:1rem 0}
-@media(min-width:900px){.only-main .cols{grid-template-columns:1fr 1fr}}
-.only-main h3{margin:.1rem 0 .5rem;font-size:1.05rem;font-weight:900}
+.only-main h3{margin:0 0 .8rem;font-family:Georgia,"Times New Roman",serif;font-size:1.25rem;letter-spacing:-.025em;font-weight:700;color:var(--ink)}
 .only-main ul{margin:.2rem 0 0;padding-left:1.1rem}
 .only-main li{margin:.25rem 0}
 
-/* Chips */
-.only-main .chips{display:flex;flex-wrap:wrap;gap:.4rem}
-.only-main .chip{border:1px solid var(--chip-bd);background:var(--chip-bg);border-radius:999px;padding:.22rem .6rem;font-size:.82rem}
+/* Compact news list */
+.only-main .news-list{list-style:none;padding:0;margin:.2rem 0 0}
+.only-main .news-list li{display:flex;align-items:baseline;gap:.65rem;margin:.6rem 0;line-height:1.55;font-size:.9rem}
+.only-main .news-list li:last-child{margin-bottom:0}
+.only-main .news-date{flex:0 0 auto;color:#738392;font-size:.75rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+.only-main .news-separator{color:#b6c2cc}
+.only-main .news-text{min-width:0}
+.only-main .news-list a{color:inherit;font-weight:700;text-decoration:none}
+.only-main .news-list a:hover,.only-main .news-list a:focus-visible{text-decoration:underline;text-underline-offset:.15em}
 
-/* Featured projects */
-.only-main .grid{display:grid;gap:.8rem;margin-top:.8rem}
-@media(min-width:900px){.only-main .grid{grid-template-columns:1fr 1fr 1fr}}
-.only-main .proj{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);padding:.9rem;display:flex;flex-direction:column;gap:.35rem}
-.only-main .proj .p-title{font-weight:800}
-.only-main .proj .p-note{color:var(--muted);font-size:.92rem}
-.only-main .proj a{color:#0ea5e9;text-decoration:none;font-weight:700}
+/* Research map: two directions connected through a shared question */
+.only-main .research-interests{padding:1.3rem}
+.only-main .research-interests > h3{margin-bottom:1.1rem}
+.only-main .research-map{
+  display:grid;grid-template-columns:repeat(6,minmax(0,1fr));
+  grid-template-rows:minmax(110px,auto) 58px minmax(164px,auto);column-gap:.8rem;
+}
+.only-main .research-level{
+  display:flex;align-items:center;gap:.75rem;margin:0 0 .65rem;
+  color:#7b8996;font-size:.62rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase
+}
+.only-main .research-level::after{content:"";height:1px;flex:1;background:var(--line)}
+.only-main .research-node{
+  min-width:0;border:1px solid var(--node-border);border-radius:12px;
+  background:var(--node-bg);color:var(--node-ink);padding:1rem;
+  display:flex;flex-direction:column;justify-content:flex-start;position:relative;
+}
+.only-main .research-node h4{margin:0 0 .45rem;color:inherit;font-size:.96rem;font-weight:750;line-height:1.4}
+.only-main .research-node p{margin:0;color:var(--muted);font-size:.76rem;line-height:1.65}
+.only-main .node-spatial{grid-column:1 / span 3;grid-row:1;justify-content:center;--node-bg:linear-gradient(125deg,#edf5fc,#f8fbfe);--node-border:#c4d6e5;--node-ink:#2b5274}
+.only-main .node-generalization{grid-column:4 / span 3;grid-row:1;justify-content:center;--node-bg:linear-gradient(125deg,#f1eef9,#faf9fd);--node-border:#d5cbe5;--node-ink:#625079}
+.only-main .node-spatial h4,.only-main .node-generalization h4{padding-right:1.7rem;font-size:1.02rem;letter-spacing:-.015em}
+.only-main .direction-icon{position:absolute;right:.85rem;top:.9rem;width:24px;height:24px;opacity:.55;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
+.only-main .research-connectors{grid-column:1 / -1;grid-row:2;width:100%;height:58px;overflow:visible;pointer-events:none}
+.only-main .question-spatial{grid-column:1 / span 2;grid-row:3;--node-bg:#fbfcfe;--node-border:#d4e0e9;--node-ink:#3e617d}
+.only-main .question-shared{grid-column:3 / span 2;grid-row:3;--node-bg:linear-gradient(150deg,#eff7f3,#f8fbf9);--node-border:#aac6b9;--node-ink:#356a55;box-shadow:0 3px 12px rgba(54,102,82,.045)}
+.only-main .question-adaptation{grid-column:5 / span 2;grid-row:3;--node-bg:#fcfbfe;--node-border:#dfd7e9;--node-ink:#6a547f}
+.only-main .research-node .node-label{display:block;margin-bottom:.65rem;min-height:1.6em;font-size:.62rem;font-weight:700;letter-spacing:.055em;text-transform:uppercase;line-height:1.6}
+.only-main .research-map .question-title{font-size:.87rem;min-height:2.8em;letter-spacing:-.01em}
+.only-main .research-map .question-detail{font-size:.74rem;line-height:1.65}
+.only-main .mobile-direction{display:none}
+.only-main .research-experience-label{margin-top:1.35rem;margin-bottom:.8rem}
+.only-main .research-experience{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}
+.only-main .experience-item + .experience-item{border-left:1px solid var(--line);padding-left:.8rem}
+.only-main .experience-item h4{margin:0 0 .35rem;color:#526174;font-size:.76rem;font-weight:700;line-height:1.45}
+.only-main .experience-item p{margin:0;color:#778491;font-size:.71rem;line-height:1.65}
 
 /* Competition highlights */
 .only-main .competition-grid{display:flex;flex-wrap:wrap;gap:.8rem}
 .only-main .competition-card{
   flex:1 1 260px;min-width:0;position:relative;overflow:hidden;
-  border:1px solid #f1d28f;border-radius:14px;background:linear-gradient(145deg,#fffdf7,#fff8e8);
-  box-shadow:var(--shadow);padding:1rem;display:flex;flex-direction:column;gap:.3rem
+  border:1px solid #e8dcc2;border-radius:14px;background:linear-gradient(145deg,#fffefa,#fffcf5);
+  box-shadow:var(--shadow);padding:1.1rem;display:flex;flex-direction:column;gap:.4rem
 }
 .only-main .competition-card::before{
-  content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(#f59e0b,#f97316)
+  content:"";position:absolute;inset:0 auto 0 0;width:3px;background:#cbb17b
 }
-.only-main .competition-rank{color:#92400e;font-size:.82rem;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
-.only-main .competition-title{font-weight:850}
-.only-main .competition-note{color:var(--muted);font-size:.9rem}
-.only-main .competition-card a{margin-top:auto;padding-top:.2rem;color:#0ea5e9;text-decoration:none;font-weight:700}
+.only-main .competition-rank{color:#977136;font-size:.68rem;font-weight:750;letter-spacing:.065em;text-transform:uppercase}
+.only-main .competition-title{font-weight:750;font-size:.94rem}
+.only-main .competition-note{color:var(--muted);font-size:.8rem;line-height:1.6}
+.only-main .competition-card a{margin-top:auto;padding-top:.45rem;color:#43879a;text-decoration:none;font-weight:700;font-size:.8rem}
+.only-main .academic-service p{margin:.6rem 0 0;color:var(--muted);font-size:.86rem;line-height:1.75}
+.only-main .academic-service strong{color:var(--ink);font-weight:700}
 
 /* Utility spacing */
 .only-main .mt1{margin-top:1rem}
 
-/* Interests tiles */
-.only-main .interests-tiles .interest-thesis{
-  margin:.35rem 0 .9rem;padding:.72rem .85rem;border-left:4px solid #06b6d4;border-radius:0 12px 12px 0;
-  background:linear-gradient(90deg,rgba(34,211,238,.12),rgba(99,102,241,.04))
+/* Mobile: keep the shared question prominent and read each branch vertically. */
+@media(max-width:767px){
+  .only-main .twrap{flex-wrap:wrap;gap:.45rem .8rem}
+  .only-main .portfolio-label{padding-left:.8rem;font-size:.62rem;letter-spacing:.09em}
+  .only-main .hero p{font-size:.95rem;line-height:1.8}
+  .only-main .card{padding:1rem;border-radius:16px}
+  .only-main .hero{padding:.15rem 0 .3rem}
+  .only-main > section + section{margin-top:1.15rem}
+  .only-main .research-interests > h3{margin-bottom:1rem}
+  .only-main .research-map{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-rows:auto 30px auto auto auto;gap:0 .65rem;
+  }
+  .only-main .research-node{padding:.85rem;justify-content:flex-start}
+  .only-main .node-spatial{grid-column:1;grid-row:1}
+  .only-main .node-generalization{grid-column:2;grid-row:1}
+  .only-main .node-spatial h4,.only-main .node-generalization h4{padding-right:0;min-height:2.8em;font-size:.96rem}
+  .only-main .direction-icon{display:none}
+  .only-main .research-node p{font-size:.84rem;line-height:1.6}
+  .only-main .research-connectors{height:30px}
+  .only-main .research-connectors path:first-child,.only-main .research-connectors path:last-child{display:none}
+  .only-main .question-shared{grid-column:1 / -1;grid-row:3}
+  .only-main .question-spatial{grid-column:1 / -1;grid-row:4;margin-top:.75rem}
+  .only-main .question-adaptation{grid-column:1 / -1;grid-row:5;margin-top:.75rem}
+  .only-main .research-node .node-label{min-height:0;margin-bottom:.45rem;font-size:.65rem;letter-spacing:.025em}
+  .only-main .mobile-direction{display:block;font-size:.76rem;letter-spacing:0;text-transform:none;margin-bottom:.2rem}
+  .only-main .research-map .question-title{min-height:0;font-size:.98rem}
+  .only-main .research-map .question-detail{font-size:.86rem}
+  .only-main .research-experience{grid-template-columns:1fr;gap:.75rem}
+  .only-main .experience-item{display:grid;grid-template-columns:1fr 1.15fr;gap:.75rem;align-items:start}
+  .only-main .experience-item + .experience-item{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:.75rem}
+  .only-main .experience-item h4{font-size:.83rem;margin:0}
+  .only-main .experience-item p{font-size:.8rem}
+  .only-main .news-list li{display:grid;grid-template-columns:1fr;gap:.15rem;margin:.85rem 0;font-size:.9rem}
+  .only-main .news-separator{display:none}
+  .only-main .news-date{font-size:.75rem}
+  .only-main .competition-card{padding:1rem;flex-basis:100%}
+  .only-main .competition-note,.only-main .competition-card a{font-size:.86rem}
+  .only-main .competition-card a{padding-top:.55rem;padding-bottom:.25rem}
+  .only-main .academic-service p{font-size:.9rem}
 }
-.only-main .interests-tiles .interest-thesis .kicker{
-  display:block;margin-bottom:.14rem;color:#0e7490;font-size:.7rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase
-}
-.only-main .interests-tiles .interest-thesis .focus{font-weight:900;line-height:1.25}
-.only-main .interests-tiles .tiles{
-  display:flex;flex-wrap:wrap;gap:.8rem;margin-top:.4rem
-}
-.only-main .interests-tiles .tile{
-  flex:1 1 220px;min-width:0;
-  border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);
-  padding:.85rem;display:grid;grid-template-columns:auto 1fr;grid-template-areas:
-  "ico t" "s s";column-gap:.6rem;row-gap:.45rem
-}
-.only-main .interests-tiles .ico{
-  grid-area:ico;width:36px;height:36px;border-radius:10px;
-  display:grid;place-items:center;background:#f8fafc;border:1px solid var(--line);font-size:18px
-}
-.only-main .interests-tiles .t{grid-area:t;font-weight:800;line-height:1.2}
-.only-main .interests-tiles .s{grid-area:s;color:var(--muted);font-size:.92rem}
-.only-main .interests-tiles .supporting{
-  margin-top:.9rem;padding-top:.75rem;border-top:1px dashed var(--line)
-}
-.only-main .interests-tiles .supporting-title{
-  margin-bottom:.45rem;color:var(--muted);font-size:.76rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase
-}
-.only-main .interests-tiles .supporting-chips{display:flex;flex-wrap:wrap;gap:.45rem}
-.only-main .interests-tiles .supporting-chip{
-  border:1px solid var(--chip-bd);background:var(--chip-bg);border-radius:999px;padding:.3rem .65rem;font-size:.82rem;font-weight:700
+@media(max-width:359px){
+  .only-main .portfolio-label{flex-basis:100%;padding-left:0;border-left:0}
+  .only-main .research-node{padding:.7rem}
+  .only-main .node-spatial h4,.only-main .node-generalization h4{font-size:.88rem}
 }
 
 </style>
 
   <!-- Title -->
   <div class="twrap">
-    <span class="title">Ze Rong — Research Portfolio</span>
-    <div class="bar"></div>
+    <h1 class="title">Ze Rong</h1>
+    <span class="portfolio-label">Research Portfolio</span>
   </div>
 
-  <!-- Hero summary -->
+  <!-- Personal introduction -->
   <section class="card hero">
-    <p class="bold">🎓 Master's Student in AI @ University of Macau, advised by <a href="https://zdzheng.xyz/" target="_blank" rel="noopener">Prof. Zhedong Zheng</a> · B.Eng. @ Nantong University, advised by <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=xPtCL7kAAAAJ" target="_blank" rel="noopener">Prof. Lei Ma</a> · Reliable Multimodal Learning / Computer Vision / fMRI Semantic Decoding</p>
-
+    <p>Hi! I am a <strong>master's student in AI at the University of Macau</strong>, advised by <a href="https://zdzheng.xyz/" target="_blank" rel="noopener">Prof. Zhedong Zheng</a>. I received my <strong>B.Eng. from Nantong University</strong>, where I was advised by <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=xPtCL7kAAAAJ" target="_blank" rel="noopener">Prof. Lei Ma</a>.</p>
   </section>
 
-<!-- Research Interests -->
-<section class="card interests-tiles">
-  <h3>Research Interests</h3>
-  <div class="interest-thesis">
-    <span class="kicker">Research Agenda</span>
-    <div class="focus">Reliable AI for Multimodal and Spatial Intelligence</div>
-  </div>
-  <div class="tiles">
-    <!-- 1 -->
-    <div class="tile">
-      <div class="ico">🚁</div>
-      <div class="t">Spatial Intelligence</div>
-      <div class="s">UAV perception, relative localization, cross-view understanding, and spatial reasoning.</div>
-    </div>
-    <!-- 2 -->
-    <div class="tile">
-      <div class="ico">🔍</div>
-      <div class="t">Reliable Multimodal Learning</div>
-      <div class="s">Evidence-grounded reasoning, uncertainty-aware learning, and trustworthy multimodal systems.</div>
-    </div>
-    <!-- 3 -->
-    <div class="tile">
-      <div class="ico">🤖</div>
-      <div class="t">Agentic AI Systems</div>
-      <div class="s">Tool use, persistent workflows, long-horizon execution, and human-agent collaboration.</div>
-    </div>
-  </div>
-  <div class="supporting">
-    <div class="supporting-title">Supporting Expertise</div>
-    <div class="supporting-chips">
-      <span class="supporting-chip">〰️ Frequency-Domain Representation Learning</span>
-      <span class="supporting-chip">🩺 Medical Image Segmentation</span>
-      <span class="supporting-chip">🧠 Neural Semantic Decoding</span>
-    </div>
-  </div>
-</section>
+  <!-- Research Interests -->
+  <section class="card research-interests" aria-labelledby="research-interests-heading">
+    <h3 id="research-interests-heading">Research Interests</h3>
+    <div class="research-map">
+      <div class="research-node node-spatial">
+        <svg class="direction-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5 21 7.5v9l-9 5-9-5v-9Z M3 7.5l9 5 9-5 M12 12.5v9"/></svg>
+        <h4>Spatial Intelligence</h4>
+        <p>Geometry · Localization · Spatial reasoning</p>
+      </div>
+      <div class="research-node node-generalization">
+        <svg class="direction-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h15m-4-4 4 4-4 4 M20 17H5m4-4-4 4 4 4"/></svg>
+        <h4>Visual Generalization</h4>
+        <p>Domain adaptation · Transfer learning</p>
+      </div>
 
-  <!-- News (latest 3) -->
+      <svg class="research-connectors" viewBox="0 0 600 60" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="spatial-shared-link" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#90b0ca"/><stop offset="1" stop-color="#83ad99"/></linearGradient>
+          <linearGradient id="generalization-shared-link" x1="1" y1="0" x2="0" y2="1"><stop stop-color="#b5a0ca"/><stop offset="1" stop-color="#83ad99"/></linearGradient>
+        </defs>
+        <g fill="none" stroke-width="1.5" stroke-dasharray="3 4" stroke-linecap="round">
+          <path d="M147 0 C147 28 98 32 98 60" stroke="#9db7cc"/>
+          <path d="M147 0 C147 30 300 30 300 60" stroke="url(#spatial-shared-link)"/>
+          <path d="M453 0 C453 30 300 30 300 60" stroke="url(#generalization-shared-link)"/>
+          <path d="M453 0 C453 28 502 32 502 60" stroke="#bdaccf"/>
+        </g>
+        <g stroke="#fff" stroke-width="1.2"><circle cx="147" cy="1" r="2.6" fill="#91aec5"/><circle cx="453" cy="1" r="2.6" fill="#b29cc7"/><circle cx="300" cy="59" r="3" fill="#83aa97"/></g>
+      </svg>
+
+      <div class="research-node question-spatial">
+        <span class="node-label"><span class="mobile-direction">Spatial Intelligence</span>Understanding &amp; Planning</span>
+        <h4 class="question-title">Spatial Reasoning</h4>
+        <p class="question-detail">From geometric representations to spatial understanding and planning.</p>
+      </div>
+      <div class="research-node question-shared">
+        <span class="node-label">Shared Question</span>
+        <h4 class="question-title">Cross-domain Spatial Understanding</h4>
+        <p class="question-detail">Transferring localization and spatial representations across environments.</p>
+      </div>
+      <div class="research-node question-adaptation">
+        <span class="node-label"><span class="mobile-direction">Visual Generalization</span>Collaboration &amp; Transfer</span>
+        <h4 class="question-title">Foundation Model Collaboration</h4>
+        <p class="question-detail">Combining complementary model capabilities for domain adaptation.</p>
+      </div>
+    </div>
+
+    <p class="research-level research-experience-label">Broader Research Experience</p>
+    <div class="research-experience">
+      <div class="experience-item">
+        <h4>Multimodal Learning</h4>
+        <p>Cross-modal alignment<br>Affective understanding</p>
+      </div>
+      <div class="experience-item">
+        <h4>Medical Image Analysis</h4>
+        <p>Frequency-domain learning<br>Image segmentation</p>
+      </div>
+      <div class="experience-item">
+        <h4>Neural Semantic Decoding</h4>
+        <p>Temporal modeling<br>fMRI semantic decoding</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
   <section class="card">
     <h3>🔥 News</h3>
-    <ul>
-      <li>[2026-04] <strong>SCORE: Soccer Curriculum for Ordinal Affect Recognition with Evidence</strong> accepted by ICMR 2026.</li>
-      <li>[2025-09] <strong>FIRM: Fusion-Injected Residual Memory Brings Token-Level Alignment to Unsupervised VI-ReID</strong> accepted by ACML 2025.</li>
-      <li>[2025-07] <strong>FaRMamba: Frequency-based Learning and Reconstruction Aided Mamba for Medical Segmentation</strong> accepted by ICONIP 2025.</li>
+    <ul class="news-list">
+      <li><time class="news-date" datetime="2026-09">2026-09</time><span class="news-separator" aria-hidden="true">·</span><span class="news-text"><a href="{{ '/publications/' | relative_url }}#fuzzystateformer">FuzzyStateFormer</a> accepted by IEEE Transactions on Fuzzy Systems (TFS).</span></li>
+      <li><time class="news-date" datetime="2026-04">2026-04</time><span class="news-separator" aria-hidden="true">·</span><span class="news-text"><a href="{{ '/publications/' | relative_url }}#score">SCORE</a> accepted by ACM ICMR 2026.</span></li>
+      <li><time class="news-date" datetime="2025-09">2025-09</time><span class="news-separator" aria-hidden="true">·</span><span class="news-text"><a href="{{ '/publications/' | relative_url }}#firm">FIRM</a> accepted by ACML 2025.</span></li>
+      <li><time class="news-date" datetime="2025-07">2025-07</time><span class="news-separator" aria-hidden="true">·</span><span class="news-text"><a href="{{ '/publications/' | relative_url }}#farmamba">FaRMamba</a> accepted by ICONIP 2025.</span></li>
     </ul>
-  </section>
-
-  <!-- Featured Projects (3) -->
-  <section class="mt1">
-    <h3 class="bold" style="margin:.1rem 0 .5rem">Featured Projects</h3>
-    <div class="grid">
-      <!-- Project 1 -->
-      <div class="proj">
-        <div class="p-title">FaRMamba — Frequency-aware Mamba for Medical Segmentation</div>
-        <div class="p-note">MSFM + reconstruction-aided learning; evaluated on CAMUS / Kvasir-Seg / MICE-cochlea.</div>
-        <a href="https://arxiv.org/abs/2507.20056">Learn more →</a>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="proj">
-        <div class="p-title">PairUAV-PACE - Polar Axis-Conditioned UAV Relative Localization</div>
-        <div class="p-note">A reproducible PairUAV 2026 release for ordered UAV-view relative localization with heading, metric range, and calibrated post-processing.</div>
-        <a href="https://github.com/zerong7777-boop/PairUAV-PACE">Learn more →</a>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="proj">
-        <div class="p-title">Agent Harness - Persistent AI Coding Workflow Orchestration</div>
-        <div class="p-note">A local orchestration layer for long-running AI coding workflows with task runtime, session handoff, and durable memory.</div>
-        <a href="https://github.com/zerong7777-boop/agent-harness">Learn more →</a>
-      </div>
-    </div>
   </section>
 
   <!-- Competition Highlights -->
   <section class="mt1">
-    <h3 class="bold" style="margin:.1rem 0 .5rem">Competition Highlights</h3>
+    <h3>Competition Highlights</h3>
     <div class="competition-grid">
       <div class="competition-card">
-        <div class="competition-rank">3rd Place</div>
+        <div class="competition-rank">Best Reported Result</div>
         <div class="competition-title">ACM MM 2026 UAVM Challenge</div>
-        <div class="competition-note">PairUAV relative localization.</div>
+        <div class="competition-note">Among public UAVM 2026 PairUAV papers (as of Oct. 1, 2026).</div>
+        <div class="competition-note"><strong>3rd overall</strong> on the official leaderboard.</div>
         <a href="https://www.codabench.org/competitions/15251/#/results-tab">View results →</a>
       </div>
 
@@ -270,9 +320,9 @@ seo:
   </section>
 
   <!-- Academic Service -->
-  <section class="card mt1">
+  <section class="card mt1 academic-service">
     <h3>Academic Service</h3>
-    <p><strong>Conference Reviewer:</strong> IEEE ICME 2025 &amp; 2026 · ACM ICMR 2026 · IEEE ICASSP 2026</p>
+    <p><strong>Conference Reviewer:</strong> IEEE ICME 2025 &amp; 2026 · ACM ICMR 2026 · IEEE ICASSP 2026 · ACM Multimedia Asia 2026</p>
     <p><strong>Journal Reviewer:</strong> Applied Intelligence</p>
   </section>
 

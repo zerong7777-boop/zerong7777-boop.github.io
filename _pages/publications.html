@@ -56,6 +56,7 @@ author_profile: true
   transition:transform .12s ease,box-shadow .12s ease;
 }
 .pubs .pub-card:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(2,6,23,.14);}
+.pubs .pub-card[id]{scroll-margin-top:5rem;}
 
 /* ---------- Image / Text ratio ---------- */
 .pubs .pub-left  { flex:0 0 45%; max-width:45%; }
@@ -119,7 +120,7 @@ author_profile: true
 <h2 class="section-h">Conferences</h2>
 
 <!-- SCORE -->
-<div class="pub-card">
+<div class="pub-card" id="score">
   <div class="pub-left">
     <img src="/assets/pub/score_teaser.png" alt="SCORE teaser">
   </div>
@@ -163,7 +164,7 @@ author_profile: true
 </div> -->
 
 <!-- 4. FIRM -->
-<div class="pub-card">
+<div class="pub-card" id="firm">
   <div class="pub-left">
     <img src="/assets/pub/firm_teaser.png" alt="FIRM teaser">
   </div>
@@ -181,7 +182,7 @@ author_profile: true
 </div>
 
 <!-- 3. FaRMamba -->
-<div class="pub-card">
+<div class="pub-card" id="farmamba">
   <div class="pub-left">
     <img src="/assets/pub/farmamba_teaser.png" alt="FaRMamba teaser">
   </div>
@@ -202,6 +203,18 @@ author_profile: true
 
 <!-- ==================== Journals ==================== -->
 <h2 class="section-h">Journals</h2>
+
+<!-- FuzzyStateFormer -->
+<div class="pub-card" id="fuzzystateformer">
+  <div class="pub-left">
+    <img src="/assets/pub/fuzzystateformer_teaser.png" alt="FuzzyStateFormer framework with neuro-fuzzy brain tokenization and state-aware temporal decoding" width="1505" height="1189" loading="lazy">
+  </div>
+  <div class="pub-right">
+    <div class="venue">IEEE Transactions on Fuzzy Systems, 2026</div>
+    <h3>FuzzyStateFormer: A Neuro-Fuzzy State-Aware Framework With Transformer Temporal Encoding for Reliability-Aware Non-Invasive Long-Sequence fMRI Semantic Decoding</h3>
+    <p class="authors">Lei Ma&#8224;, <b>Ze Rong</b>&#8224;, Xiaofeng Shen, Xinliang Cao, Leixiao Yu, and Ting Li*</p>
+  </div>
+</div>
 
 <!-- 2. MSC-LSAM -->
 <div class="pub-card">
@@ -233,7 +246,7 @@ author_profile: true
 <h2 class="section-h">Preprints</h2>
 
 <!-- PACE -->
-<div class="pub-card">
+<div class="pub-card" id="pace">
   <div class="pub-left">
     <img src="/assets/pub/pace_teaser.png" alt="PACE teaser">
   </div>
