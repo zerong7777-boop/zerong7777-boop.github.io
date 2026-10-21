@@ -66,9 +66,6 @@ seo:
 @media(min-width:925px) and (max-width:1279px){
   .page:has(.only-main){padding-right:1.25rem}
 }
-@media(min-width:768px) and (max-width:1279px){
-  .only-main .research-map .research-node .node-label{min-height:3.2em}
-}
 
 /* Name and portfolio masthead */
 .only-main .twrap{display:flex;align-items:baseline;gap:1rem;margin:.1rem 0 1rem}
@@ -107,37 +104,32 @@ seo:
 .only-main .news-list a{color:inherit;font-weight:700;text-decoration:none}
 .only-main .news-list a:hover,.only-main .news-list a:focus-visible{text-decoration:underline;text-underline-offset:.15em}
 
-/* Research map: two directions connected through a shared question */
+/* A compact research diagram: shared focus, coupled directions, transfer. */
 .only-main .research-interests{padding:1.3rem}
-.only-main .research-interests > h3{margin-bottom:1.1rem}
-.only-main .research-map{
-  display:grid;grid-template-columns:repeat(6,minmax(0,1fr));
-  grid-template-rows:minmax(110px,auto) 58px minmax(164px,auto);column-gap:.8rem;
-}
+.only-main .research-interests > h3{margin-bottom:1.2rem}
+.only-main .research-map{max-width:640px;margin:0 auto;position:relative}
 .only-main .research-level{
   display:flex;align-items:center;gap:.75rem;margin:0 0 .65rem;
   color:#7b8996;font-size:.62rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase
 }
 .only-main .research-level::after{content:"";height:1px;flex:1;background:var(--line)}
-.only-main .research-node{
-  min-width:0;border:1px solid var(--node-border);border-radius:12px;
-  background:var(--node-bg);color:var(--node-ink);padding:1rem;
-  display:flex;flex-direction:column;justify-content:flex-start;position:relative;
-}
-.only-main .research-node h4{margin:0 0 .45rem;color:inherit;font-size:.96rem;font-weight:750;line-height:1.4}
-.only-main .research-node p{margin:0;color:var(--muted);font-size:.76rem;line-height:1.65}
-.only-main .node-spatial{grid-column:1 / span 3;grid-row:1;justify-content:center;--node-bg:linear-gradient(125deg,#edf5fc,#f8fbfe);--node-border:#c4d6e5;--node-ink:#2b5274}
-.only-main .node-generalization{grid-column:4 / span 3;grid-row:1;justify-content:center;--node-bg:linear-gradient(125deg,#f1eef9,#faf9fd);--node-border:#d5cbe5;--node-ink:#625079}
-.only-main .node-spatial h4,.only-main .node-generalization h4{padding-right:1.7rem;font-size:1.02rem;letter-spacing:-.015em}
-.only-main .direction-icon{position:absolute;right:.85rem;top:.9rem;width:24px;height:24px;opacity:.55;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
-.only-main .research-connectors{grid-column:1 / -1;grid-row:2;width:100%;height:58px;overflow:visible;pointer-events:none}
-.only-main .question-spatial{grid-column:1 / span 2;grid-row:3;--node-bg:#fbfcfe;--node-border:#d4e0e9;--node-ink:#3e617d}
-.only-main .question-shared{grid-column:3 / span 2;grid-row:3;--node-bg:linear-gradient(150deg,#eff7f3,#f8fbf9);--node-border:#aac6b9;--node-ink:#356a55;box-shadow:0 3px 12px rgba(54,102,82,.045)}
-.only-main .question-adaptation{grid-column:5 / span 2;grid-row:3;--node-bg:#fcfbfe;--node-border:#dfd7e9;--node-ink:#6a547f}
-.only-main .research-node .node-label{display:block;margin-bottom:.65rem;min-height:1.6em;font-size:.62rem;font-weight:700;letter-spacing:.055em;text-transform:uppercase;line-height:1.6}
-.only-main .research-map .question-title{font-size:.87rem;min-height:2.8em;letter-spacing:-.01em}
-.only-main .research-map .question-detail{font-size:.74rem;line-height:1.65}
-.only-main .mobile-direction{display:none}
+.only-main .research-node{min-width:0;border:1px solid var(--node-border);border-radius:11px;background:var(--node-bg);color:var(--node-ink);padding:.9rem 1rem;text-align:center}
+.only-main .research-node h4{margin:0 0 .3rem;color:inherit;font-size:.96rem;font-weight:750;line-height:1.4;letter-spacing:-.015em}
+.only-main .research-node p{margin:0;color:var(--muted);font-size:.71rem;line-height:1.65}
+.only-main .node-spatial{width:66%;margin:0 auto;--node-bg:#edf4fa;--node-border:#bdd2e3;--node-ink:#315b7c}
+.only-main .node-geometry{--node-bg:#f3f7fb;--node-border:#cbdbe7;--node-ink:#3b607d}
+.only-main .node-reasoning{--node-bg:#f0f7f3;--node-border:#c2d8cb;--node-ink:#3b6c58}
+.only-main .research-generalization{width:76%;margin:0 auto;--node-bg:#f3eff9;--node-border:#d5c9e3;--node-ink:#65507e}
+.only-main .research-branches{display:grid;grid-template-columns:minmax(0,1fr) 3.5rem minmax(0,1fr);align-items:stretch}
+.only-main .research-branches .research-node{display:flex;flex-direction:column;justify-content:center;min-height:116px}
+.only-main .research-coupling{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.1rem;color:#899b9e}
+.only-main .research-coupling span{font-size:.55rem;letter-spacing:.02em}
+.only-main .research-coupling .coupling-arrow{font-size:1.15rem;line-height:1}
+.only-main .research-connectors{display:block;width:100%;height:29px;pointer-events:none;overflow:visible}
+.only-main .branch-stem{display:none}
+.only-main .research-priors{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:.2rem .65rem;margin:.85rem 0 0;text-align:center}
+.only-main .research-priors span{font-size:.56rem;letter-spacing:.07em;text-transform:uppercase;color:#81908d}
+.only-main .research-priors p{margin:0;font-size:.7rem;color:#647c73;line-height:1.6}
 .only-main .research-experience-label{margin-top:1.35rem;margin-bottom:.8rem}
 .only-main .research-experience{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}
 .only-main .experience-item + .experience-item{border-left:1px solid var(--line);padding-left:.8rem}
@@ -164,7 +156,7 @@ seo:
 /* Utility spacing */
 .only-main .mt1{margin-top:1rem}
 
-/* Mobile: keep the shared question prominent and read each branch vertically. */
+/* Mobile: preserve the same hierarchy with stacked research branches. */
 @media(max-width:767px){
   .only-main .twrap{flex-wrap:wrap;gap:.45rem .8rem}
   .only-main .portfolio-label{padding-left:.8rem;font-size:.62rem;letter-spacing:.09em}
@@ -173,25 +165,23 @@ seo:
   .only-main .hero{padding:.15rem 0 .3rem}
   .only-main > section + section{margin-top:1.15rem}
   .only-main .research-interests > h3{margin-bottom:1rem}
-  .only-main .research-map{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    grid-template-rows:auto 30px auto auto auto;gap:0 .65rem;
-  }
-  .only-main .research-node{padding:.85rem;justify-content:flex-start}
-  .only-main .node-spatial{grid-column:1;grid-row:1}
-  .only-main .node-generalization{grid-column:2;grid-row:1}
-  .only-main .node-spatial h4,.only-main .node-generalization h4{padding-right:0;min-height:2.8em;font-size:.96rem}
-  .only-main .direction-icon{display:none}
-  .only-main .research-node p{font-size:.84rem;line-height:1.6}
-  .only-main .research-connectors{height:30px}
-  .only-main .research-connectors path:first-child,.only-main .research-connectors path:last-child{display:none}
-  .only-main .question-shared{grid-column:1 / -1;grid-row:3}
-  .only-main .question-spatial{grid-column:1 / -1;grid-row:4;margin-top:.75rem}
-  .only-main .question-adaptation{grid-column:1 / -1;grid-row:5;margin-top:.75rem}
-  .only-main .research-node .node-label{min-height:0;margin-bottom:.45rem;font-size:.65rem;letter-spacing:.025em}
-  .only-main .mobile-direction{display:block;font-size:.76rem;letter-spacing:0;text-transform:none;margin-bottom:.2rem}
-  .only-main .research-map .question-title{min-height:0;font-size:.98rem}
-  .only-main .research-map .question-detail{font-size:.86rem}
+  .only-main .research-map{max-width:460px}
+  .only-main .node-spatial{width:90%}
+  .only-main .research-generalization{width:90%}
+  .only-main .research-branches{grid-template-columns:1fr}
+  .only-main .research-connectors{height:22px}
+  .only-main .research-connectors .branch-split{display:none}
+  .only-main .research-connectors .branch-stem{display:block}
+  .only-main .research-node{padding:.8rem}
+  .only-main .research-node h4{font-size:.98rem}
+  .only-main .research-node p{font-size:.79rem}
+  .only-main .research-branches .research-node{min-height:0}
+  .only-main .research-branches h4 br{display:none}
+  .only-main .research-coupling{height:28px;flex-direction:row;gap:.45rem}
+  .only-main .research-coupling .coupling-arrow{transform:rotate(90deg);font-size:1rem}
+  .only-main .research-coupling span{font-size:.6rem}
+  .only-main .research-priors p{font-size:.77rem}
+  .only-main .research-priors span{font-size:.59rem}
   .only-main .research-experience{grid-template-columns:1fr;gap:.75rem}
   .only-main .experience-item{display:grid;grid-template-columns:1fr 1.15fr;gap:.75rem;align-items:start}
   .only-main .experience-item + .experience-item{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:.75rem}
@@ -208,7 +198,6 @@ seo:
 @media(max-width:359px){
   .only-main .portfolio-label{flex-basis:100%;padding-left:0;border-left:0}
   .only-main .research-node{padding:.7rem}
-  .only-main .node-spatial h4,.only-main .node-generalization h4{font-size:.88rem}
 }
 
 </style>
@@ -229,44 +218,42 @@ seo:
     <h3 id="research-interests-heading">Research Interests</h3>
     <div class="research-map">
       <div class="research-node node-spatial">
-        <svg class="direction-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5 21 7.5v9l-9 5-9-5v-9Z M3 7.5l9 5 9-5 M12 12.5v9"/></svg>
         <h4>Spatial Intelligence</h4>
-        <p>Geometry · Localization · Spatial reasoning</p>
+        <p>Perception · Understanding · Planning</p>
       </div>
-      <div class="research-node node-generalization">
-        <svg class="direction-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h15m-4-4 4 4-4 4 M20 17H5m4-4-4 4 4 4"/></svg>
-        <h4>Visual Generalization</h4>
-        <p>Domain adaptation · Transfer learning</p>
-      </div>
-
-      <svg class="research-connectors" viewBox="0 0 600 60" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-        <defs>
-          <linearGradient id="spatial-shared-link" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#90b0ca"/><stop offset="1" stop-color="#83ad99"/></linearGradient>
-          <linearGradient id="generalization-shared-link" x1="1" y1="0" x2="0" y2="1"><stop stop-color="#b5a0ca"/><stop offset="1" stop-color="#83ad99"/></linearGradient>
-        </defs>
-        <g fill="none" stroke-width="1.5" stroke-dasharray="3 4" stroke-linecap="round">
-          <path d="M147 0 C147 28 98 32 98 60" stroke="#9db7cc"/>
-          <path d="M147 0 C147 30 300 30 300 60" stroke="url(#spatial-shared-link)"/>
-          <path d="M453 0 C453 30 300 30 300 60" stroke="url(#generalization-shared-link)"/>
-          <path d="M453 0 C453 28 502 32 502 60" stroke="#bdaccf"/>
+      <svg class="research-connectors" viewBox="0 0 600 30" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <g class="branch-split" fill="none" stroke-width="1.3" stroke-dasharray="3 3" stroke-linecap="round">
+          <path d="M300 0 C300 14 135 15 135 30" stroke="#a8c1d4"/>
+          <path d="M300 0 C300 14 465 15 465 30" stroke="#accabc"/>
         </g>
-        <g stroke="#fff" stroke-width="1.2"><circle cx="147" cy="1" r="2.6" fill="#91aec5"/><circle cx="453" cy="1" r="2.6" fill="#b29cc7"/><circle cx="300" cy="59" r="3" fill="#83aa97"/></g>
+        <path class="branch-stem" d="M300 0 V30" fill="none" stroke="#b6cdd5" stroke-width="1.3" stroke-dasharray="3 3"/>
       </svg>
-
-      <div class="research-node question-spatial">
-        <span class="node-label"><span class="mobile-direction">Spatial Intelligence</span>Understanding &amp; Planning</span>
-        <h4 class="question-title">Spatial Reasoning</h4>
-        <p class="question-detail">From geometric representations to spatial understanding and planning.</p>
+      <div class="research-branches">
+        <div class="research-node node-geometry">
+          <h4>Visual Geometry<br> &amp; Localization</h4>
+          <p>Pose · Matching · Geo-localization</p>
+        </div>
+        <div class="research-coupling" aria-label="Geometry and reasoning inform each other">
+          <span>inform</span><span class="coupling-arrow" aria-hidden="true">↔</span><span>verify</span>
+        </div>
+        <div class="research-node node-reasoning">
+          <h4>Spatial Reasoning<br> &amp; Planning</h4>
+          <p>VLMs · Constraints · Actions</p>
+        </div>
       </div>
-      <div class="research-node question-shared">
-        <span class="node-label">Shared Question</span>
-        <h4 class="question-title">Cross-domain Spatial Understanding</h4>
-        <p class="question-detail">Transferring localization and spatial representations across environments.</p>
+      <svg class="research-connectors" viewBox="0 0 600 30" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <g class="branch-split" fill="none" stroke-width="1.3" stroke-dasharray="3 3" stroke-linecap="round">
+          <path d="M135 0 C135 15 300 16 300 30" stroke="#b2bdd5"/>
+          <path d="M465 0 C465 15 300 16 300 30" stroke="#b9c5ce"/>
+        </g>
+        <path class="branch-stem" d="M300 0 V30" fill="none" stroke="#c6bbd5" stroke-width="1.3" stroke-dasharray="3 3"/>
+      </svg>
+      <div class="research-node research-generalization">
+        <h4>Visual Generalization</h4>
+        <p>Cross-view · Cross-domain · Sim2Real</p>
       </div>
-      <div class="research-node question-adaptation">
-        <span class="node-label"><span class="mobile-direction">Visual Generalization</span>Adaptation &amp; Transfer</span>
-        <h4 class="question-title">Domain Adaptation &amp; Transfer</h4>
-        <p class="question-detail">Learning visual representations that transfer across domains and data distributions.</p>
+      <div class="research-priors">
+        <span>Exploring priors</span><p>Geometric · Semantic · Generative</p>
       </div>
     </div>
 
@@ -322,7 +309,7 @@ seo:
   <!-- Academic Service -->
   <section class="card mt1 academic-service">
     <h3>Academic Service</h3>
-    <p><strong>Conference Reviewer:</strong> IEEE ICME 2025 &amp; 2026 · ACM ICMR 2026 · IEEE ICASSP 2026 · ACM Multimedia Asia 2026</p>
+    <p><strong>Conference Reviewer:</strong> IEEE ICME 2025 &amp; 2026 · ACM ICMR 2026 · IEEE ICASSP 2026 &amp; 2027 · ACM Multimedia Asia 2026</p>
     <p><strong>Journal Reviewer:</strong> Applied Intelligence</p>
   </section>
 
