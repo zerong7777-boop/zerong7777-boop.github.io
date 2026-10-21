@@ -120,10 +120,12 @@ seo:
 .only-main .node-geometry{--node-bg:#f3f7fb;--node-border:#cbdbe7;--node-ink:#3b607d}
 .only-main .node-reasoning{--node-bg:#f0f7f3;--node-border:#c2d8cb;--node-ink:#3b6c58}
 .only-main .research-generalization{width:76%;margin:0 auto;--node-bg:#f3eff9;--node-border:#d5c9e3;--node-ink:#65507e}
-.only-main .research-branches{display:grid;grid-template-columns:minmax(0,1fr) 3.5rem minmax(0,1fr);align-items:stretch}
-.only-main .research-branches .research-node{display:flex;flex-direction:column;justify-content:center;min-height:116px}
+.only-main .research-branches{display:grid;grid-template-columns:minmax(0,1fr) 3.2rem minmax(0,1fr) 3.2rem minmax(0,1fr);align-items:stretch}
+.only-main .research-branches .research-node{position:relative;display:flex;flex-direction:column;justify-content:flex-start;padding:1rem .55rem;min-height:134px}
+.only-main .research-branches h4{font-size:.88rem}
+.only-main .node-agents{--node-bg:#faf4ea;--node-border:#e3d3b7;--node-ink:#876539}
 .only-main .research-coupling{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.1rem;color:#899b9e}
-.only-main .research-coupling span{font-size:.55rem;letter-spacing:.02em}
+.only-main .research-coupling span{font-size:.55rem;line-height:1.35;letter-spacing:.02em;white-space:nowrap}
 .only-main .research-coupling .coupling-arrow{font-size:1.15rem;line-height:1}
 .only-main .research-connectors{display:block;width:100%;height:29px;pointer-events:none;overflow:visible}
 .only-main .branch-stem{display:none}
@@ -175,7 +177,7 @@ seo:
   .only-main .research-node{padding:.8rem}
   .only-main .research-node h4{font-size:.98rem}
   .only-main .research-node p{font-size:.79rem}
-  .only-main .research-branches .research-node{min-height:0}
+  .only-main .research-branches .research-node{min-height:0;padding:.85rem .8rem}
   .only-main .research-branches h4 br{display:none}
   .only-main .research-coupling{height:28px;flex-direction:row;gap:.45rem}
   .only-main .research-coupling .coupling-arrow{transform:rotate(90deg);font-size:1rem}
@@ -223,28 +225,41 @@ seo:
       </div>
       <svg class="research-connectors" viewBox="0 0 600 30" preserveAspectRatio="none" aria-hidden="true" focusable="false">
         <g class="branch-split" fill="none" stroke-width="1.3" stroke-dasharray="3 3" stroke-linecap="round">
-          <path d="M300 0 C300 14 135 15 135 30" stroke="#a8c1d4"/>
-          <path d="M300 0 C300 14 465 15 465 30" stroke="#accabc"/>
+          <path d="M300 0 C300 14 82 15 82 30" stroke="#a8c1d4"/>
+          <path d="M300 0 V30" stroke="#accabc"/>
+          <path d="M300 0 C300 14 518 15 518 30" stroke="#d6c3a3"/>
         </g>
         <path class="branch-stem" d="M300 0 V30" fill="none" stroke="#b6cdd5" stroke-width="1.3" stroke-dasharray="3 3"/>
       </svg>
       <div class="research-branches">
         <div class="research-node node-geometry">
           <h4>Visual Geometry<br> &amp; Localization</h4>
-          <p>Pose · Matching · Geo-localization</p>
+          <p>Pose · Matching<br>Geo-localization</p>
         </div>
-        <div class="research-coupling" aria-label="Geometry and reasoning inform each other">
-          <span>inform</span><span class="coupling-arrow" aria-hidden="true">↔</span><span>verify</span>
+        <div class="research-coupling" aria-label="Geometry informs spatial reasoning; reasoning guides geometry and localization">
+          <span aria-hidden="true">Inform</span>
+          <span class="coupling-arrow" aria-hidden="true">↔</span>
+          <span aria-hidden="true">Guide</span>
         </div>
         <div class="research-node node-reasoning">
           <h4>Spatial Reasoning<br> &amp; Planning</h4>
-          <p>VLMs · Constraints · Actions</p>
+          <p>VLMs · Constraints<br>Actions</p>
+        </div>
+        <div class="research-coupling" aria-label="Spatial reasoning plans multi-agent actions; collaboration provides feedback">
+          <span aria-hidden="true">Plan</span>
+          <span class="coupling-arrow" aria-hidden="true">↔</span>
+          <span aria-hidden="true">Feedback</span>
+        </div>
+        <div class="research-node node-agents">
+          <h4>Multi-Agent<br> Collaboration</h4>
+          <p>Perception · Coordination<br>Edge AI</p>
         </div>
       </div>
       <svg class="research-connectors" viewBox="0 0 600 30" preserveAspectRatio="none" aria-hidden="true" focusable="false">
         <g class="branch-split" fill="none" stroke-width="1.3" stroke-dasharray="3 3" stroke-linecap="round">
-          <path d="M135 0 C135 15 300 16 300 30" stroke="#b2bdd5"/>
-          <path d="M465 0 C465 15 300 16 300 30" stroke="#b9c5ce"/>
+          <path d="M82 0 C82 15 300 16 300 30" stroke="#b2bdd5"/>
+          <path d="M300 0 V30" stroke="#b9c5ce"/>
+          <path d="M518 0 C518 15 300 16 300 30" stroke="#d0c2c9"/>
         </g>
         <path class="branch-stem" d="M300 0 V30" fill="none" stroke="#c6bbd5" stroke-width="1.3" stroke-dasharray="3 3"/>
       </svg>
@@ -290,10 +305,9 @@ seo:
     <h3>Competition Highlights</h3>
     <div class="competition-grid">
       <div class="competition-card">
-        <div class="competition-rank">Best Reported Result</div>
+        <div class="competition-rank">3rd Place Overall</div>
         <div class="competition-title">ACM MM 2026 UAVM Challenge</div>
-        <div class="competition-note">Among public UAVM 2026 PairUAV papers (as of Oct. 1, 2026).</div>
-        <div class="competition-note"><strong>3rd overall</strong> on the official leaderboard.</div>
+        <div class="competition-note">PairUAV · UAV-to-UAV Relative Localization.</div>
         <a href="https://www.codabench.org/competitions/15251/#/results-tab">View results →</a>
       </div>
 
