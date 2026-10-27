@@ -7,5 +7,5 @@ permalink: /cv/
 ---
 
 <!-- 无插件版本：HTML meta 跳转 -->
-<meta http-equiv="refresh" content="0; url=/assets/CV_ZeRong_20261013_ResearchFocus.pdf" />
-If you are not redirected automatically, <a href="/assets/CV_ZeRong_20261013_ResearchFocus.pdf">please click here to download the PDF</a>.
+<meta http-equiv="refresh" content="0; url=/assets/CV_ZeRong_20261027.pdf" />
+If you are not redirected automatically, <a href="/assets/CV_ZeRong_20261027.pdf">please click here to download the PDF</a>.
